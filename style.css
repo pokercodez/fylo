@@ -1,0 +1,794 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-blue: hsl(243, 87%, 12%);
+    --desaturated-blue: hsl(238, 22%, 44%);
+    --accent-bright-blue: hsl(224, 93%, 58%);
+    --accent-mod-cyan: hsl(170, 45%, 43%);
+    --neutral-light-grayishblue: hsl(240, 75%, 98%);
+    --neutral-light-gray: hsl(0, 0%, 75%);
+    --body-copy-fs: 16px;
+    --font-ss-heading: 18px;
+    --font-ss-weight: 600;
+    --font-ss-lineheight: 16px;
+    --font-ss-body: 12px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,button,input{
+    font-family: 'Raleway', sans-serif;
+}
+@media (max-width: 1044px) {
+    header{
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    .navigation{
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .logo{
+        /* width: 80px;
+        height: 45px; */
+    }
+
+    .navigation.logo svg{
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .nav-items{
+      display: flex;
+    }
+    .nav-items a{
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--dark-blue);
+    }
+    .nav-items li{
+      list-style: none;
+     padding: 0.25rem;
+    }
+    .main-one{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .main-one .main-one-left{
+        color: var(--dark-blue);
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .main-one .main-one-left h1{
+        color: var(--dark-blue);
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .main-one .main-one-left .message{
+        color: var(--dark-blue);
+        text-align: center;
+        font-weight: 500;
+        line-height: 26px;
+        font-size: 16px;
+        margin-bottom: 2rem;
+    }
+    .main-one .main-one-left .gs-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main-one .main-one-left .gs-form input{
+        width: 100%;
+        padding: 12px 0px;
+        margin-bottom: 1rem;
+    }
+    .main-one .main-one-left form .email{
+        height: 44px;
+        border: 1px solid var(--desaturated-blue);
+        outline: none;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+    }
+    .main-one .main-one-left form .get-started{
+        background-color: var(--accent-bright-blue);
+        border: none;
+        outline: none;
+        color: #fff;
+        height: 44px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        margin-bottom: 5rem;
+    }
+
+    .main-one .main-two-right{
+        margin-top: 4rem;
+        width: 100%;
+    } 
+    img{
+        width: 100%;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-two{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        /* margin-top: 16rem; */
+        padding: 2em 1em;
+        background-color: rgb(248,248,254);
+    }
+    .main-two-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        gap: 1rem;
+        width: 100%;
+    }
+    .main-two-left h2{
+        text-align: center;
+        color: var(--dark-blue);
+        font-size: var(--font-ss-heading);
+        font-weight: var(--font-ss-weight);
+        line-height: var(--font-ss-lineheight);
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    .main-two-left .p-one{
+        text-align: start;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 22px;
+        color: rgb(116,113,130);
+        width: 100%;
+    }
+    .main-two-left .p-two{
+        text-align: start;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 22px;
+        color: rgb(116,113,130);
+        width: 100%;
+    }
+    .main-two .main-two-left a{
+        text-decoration: none;
+        padding: 8px 0px;
+        color: var(--accent-mod-cyan);
+        border-bottom: 2px solid var(--accent-mod-cyan);
+    }
+    .card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 0 5px #f6f6f6;
+        padding: 32px;
+        border-radius: 0.25rem;
+        margin: 3rem 0px;
+        box-shadow: -5px 0 10px rgba(242, 242, 247, 0.7), 5px 0 10px rgba(242, 242, 247, 0.7);
+    }
+    .card .img-person{
+        width: 10%;
+        border-radius: 2rem;
+        margin-right: 1rem;
+    }
+    
+    .card p{
+        margin: 16px 0px;
+        color: var(--dark-blue);
+    }
+    .card img{
+        width: 5%;
+    }
+    
+    .card-profile{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .subtext{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: var(--dark-blue);
+    }
+    
+    .subtext span{
+        font-weight: 600;
+        line-height: 16px;
+        font-size: 18px;
+        margin-bottom: 0.25rem;
+    }
+
+    .subtext small{
+        font-weight: 500;
+        line-height: 16px;
+        font-size: 14px;
+    }
+    .subscribe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--desaturated-blue);
+        color: #fff;
+        padding: 3rem 0;
+    }
+    .subscribe .cards h2{
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 600;
+        width: 100%;
+    }
+    .subscribe .cards p{
+        font-weight: 500;
+        line-height: 26px;
+        font-size: 16px;
+        margin: 1.65rem 0px;
+        width: 100%;
+    }
+    
+    .subscribe .cards {
+        padding: 0 2rem;
+        width: 100%;
+    }
+
+    .subscribe form .email{
+        width: 80%;
+        padding: 12px;
+        border-radius: 0.25rem;
+        color: var(--dark-blue);
+        border: none;
+        outline: none;
+        margin-bottom: 1rem;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.15), 5px 0 10px rgba(0, 0, 0, 0.15);
+    
+    }
+    
+    .subscribe form .btn-subscribe{
+        padding: 12px 16px;
+        border-radius: 0.25rem;
+        width: 80%;
+        color: #fff;
+        background-color: var(--accent-bright-blue);
+        border: none;
+        cursor: pointer;
+        outline: none;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.), 5px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer{
+        background-color: var(--dark-blue);
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        color: var(--neutral-light-gray);
+    }
+    
+    .footer .bottom-nav span,a{
+        text-decoration: none;
+        margin-bottom: 0.75rem;
+        color: var(--neutral-light-gray);
+    }
+    .footer .bottom-nav .text-mail a{
+        margin: 0;
+    }
+    
+    .footer-logo svg{
+        
+        color: #fff;
+    }
+
+    .footer .bottom-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .text-mail{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0.55rem 0;
+        gap: 1rem;
+    }
+    
+    .text-phone{
+        align-items: center;
+    }
+    #about-us{
+        margin: 4em 0px;
+    }
+    #contact-us{
+        margin-bottom: 4em;
+    }
+
+    .text-phone img, .phone-support{
+        width: 10%;
+        height: 22px;
+        font-size: 14px;
+        line-height: 18px;
+        margin-right: 0.75rem;
+    }
+    .footer-logo{
+        width: 100%;
+    }
+    .tabs{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .footer .bottom-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .footer .bottom-nav a:hover{
+        color: rgba(242, 242, 247, 0.4);
+    }
+    .social-links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .social-links a{
+        justify-content: center;
+        margin: 0 1rem;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        display: inline-block;
+        width: 50px; /* Adjust the width and height to match your desired icon size */
+        height: 50px;
+        background-color: transparent; /* Set the background color to transparent */
+        border: 1px solid #fff; /* Add a 1px border with your desired color */
+        border-radius: 50%; /* Create a circular shape */
+        text-align: center; /* Center the icon horizontally and vertically */
+        line-height: 50px; /* Center the icon vertically */
+    }
+
+    .social-links a:hover{
+        border-color: rgba(242, 242, 247, 0.4);
+    }
+    
+    .fa-icon { /* Adjust this selector based on the class used for your icon (e.g., FontAwesome) */
+        font-size: 24px; /* Adjust the font size of the icon */
+        color: #fff; /* Set the icon color */
+    }
+    
+    
+    
+    .main-two-left a i{
+        padding: 3px;
+        border-radius: 50%;
+        margin-left: 4px;
+        background-color: var(--accent-mod-cyan);
+        color: #fff;
+    }
+  }
+
+
+
+/* Desktop design (min width 1024) */
+@media (min-width: 1024px) {
+    .main-container-wrapper{
+        width: 90vw;
+        margin: 0 auto;
+        padding: 0 44px ;
+    }
+    
+    header{
+        width: 90vw;
+        margin: 0 auto;
+    }
+    
+    
+    .navigation{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    
+    .navigation img{
+        width: 150px;
+    }
+    
+    .nav-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-items li{
+        list-style: none;
+        padding: 12px 16px;
+    }
+    
+    .nav-items li a{
+        text-decoration: none;
+        color: var(--desaturated-blue);
+    }
+    
+    .main-one{
+        width: 100%;
+        margin-top: 5rem;
+        display: flex;
+        /* grid-template-columns: 1fr 1fr; */
+        gap: 1rem;
+    }
+    
+    .main-one img{
+        width: 100%;
+    }
+    
+    
+    .main-one .main-one-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        /* padding: 24px; */
+    }
+    .main-one .main-one-left h1{
+        font-size: 36px;
+        line-height: 48px;
+        font-weight: 600;
+        color: var(--dark-blue);
+    }
+    
+    .main-one .main-one-left p{
+        margin: 24px 0px;
+        color: var(--dark-blue);
+    }
+    
+    .main-one .main-one-left form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 0px;
+    }
+    .main-one .main-one-left form .email{
+        width: 22rem;
+        height: 44px;
+        border: 1px solid var(--desaturated-blue);
+        outline: none;
+        padding: 0.5rem;
+        margin-right: 0.35rem;
+        border-radius: 0.25rem;
+    }
+    .main-one .main-one-left form .get-started{
+        padding: 16px 44px;
+        background-color: var(--accent-bright-blue);
+        border: none;
+        outline: none;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+    }
+
+    /* Style the default input and error message */
+    input[type="email"] {
+    border: 1px solid #ccc; /* Default border color */
+    }
+
+    /* .error-message {
+    display: none; 
+    color: red;
+    font-size: 12px;
+    }
+
+    
+    input[type="email"]:invalid {
+    border: 1px solid red; 
+    }
+
+    
+    input[type="email"]:invalid + .error-message::after {
+    content: "Invalid email format";
+    display: block;
+    font-size: 12px;
+    color: red;
+    } */
+
+
+    .main-two{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        /* margin-top: 16rem; */
+        padding: 4em 4rem;
+        background-color: rgb(248,248,254);
+    
+    }
+    
+    
+    .main-two .main-two-right img{
+        width: 100%;
+    }
+    
+    .main-two .main-two-left h2{
+        font-size: 36px;
+        line-height: 48px;
+        font-weight: 600;
+        color: var(--dark-blue);
+    }
+    
+    .main-two .main-two-left .p-one{
+        margin: 24px 0px;
+        color: var(--dark-blue);
+        font-weight: 500;
+        line-height: 26px;
+        font-size: 16px;
+    }
+    .main-two .main-two-left .p-two{
+        margin-bottom: 24px;
+        color: var(--dark-blue);
+        font-weight: 500;
+        line-height: 26px;
+        font-size: 16px;
+    }
+    
+    .main-two .main-two-left a{
+        text-decoration: none;
+        padding: 8px 0px;
+        color: var(--accent-mod-cyan);
+        border-bottom: 2px solid var(--accent-mod-cyan);
+    }
+    
+    .main-two .main-two-left a:hover{
+        color: rgba(60,159,143,1);
+    }
+
+    .card{
+        width: 70%;
+        background-color: #fff;
+        box-shadow: 0 0 5px #f6f6f6;
+        padding: 32px;
+        border-radius: 0.25rem;
+        margin: 3rem 0px;
+        box-shadow: -5px 0 10px rgba(242, 242, 247, 0.7), 5px 0 10px rgba(242, 242, 247, 0.7);
+    }
+    .card .img-person{
+        width: 10%;
+        border-radius: 2rem;
+        margin-right: 1rem;
+    }
+    
+    .card p{
+        margin: 16px 0px;
+        color: var(--dark-blue);
+    }
+    
+    .card-profile{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .subtext{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: var(--dark-blue);
+    }
+    
+    .subtext span{
+        font-weight: 600;
+        line-height: 16px;
+        font-size: 18px;
+        margin-bottom: 0.25rem;
+    }
+
+    .subtext small{
+        font-weight: 500;
+        line-height: 16px;
+        font-size: 14px;
+    }
+
+    .curved-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        /* border-radius: 0% 0% 50% 50% / 0% 0% 0% 0%; Use this to create the curved effect */
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        margin-top: 10rem;
+    }
+    
+    
+    .subscribe{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+        padding: 8rem 4rem;
+        background-color: var(--desaturated-blue);
+        color: #fff;
+    }
+    
+    .subscribe .cards p{
+        margin-top: 1.45rem;
+        font-weight: 500;
+        line-height: 26px;
+        font-size: 16px;
+    }
+    
+    .subscribe .cards {
+        padding: 1.75rem;
+    }
+    
+    .subscribe .cards h2{
+        font-size: 32px;
+        line-height: 48px;
+        font-weight: 600;
+    }
+
+    .subscribe form .email{
+        width: 80%;
+        padding: 12px;
+        border-radius: 0.25rem;
+        color: var(--dark-blue);
+        border: none;
+        outline: none;
+        margin-bottom: 1rem;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.15), 5px 0 10px rgba(0, 0, 0, 0.15);
+    
+    }
+    
+    .subscribe form .btn-subscribe{
+        padding: 12px 16px;
+        border-radius: 0.25rem;
+        color: #fff;
+        background-color: var(--accent-bright-blue);
+        border: none;
+        cursor: pointer;
+        outline: none;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.), 5px 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .footer{
+        background-color: var(--dark-blue);
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        color: var(--neutral-light-gray);
+    }
+    
+    .footer .bottom-nav span,a{
+        text-decoration: none;
+        margin-bottom: 0.75rem;
+        color: var(--neutral-light-gray);
+    }
+    
+    .footer-logo svg{
+        color: #fff;
+    }
+    
+    .text-mail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.35rem 0;
+        gap: 1rem;
+    }
+    
+    .text-phone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .footer-logo{
+        width: 100%;
+    }
+    .tabs{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .footer .bottom-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .footer .bottom-nav a:hover{
+        color: rgba(242, 242, 247, 0.4);
+    }
+    
+    .social-links a{
+        justify-content: center;
+        margin: 0 1rem;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        display: inline-block;
+        width: 50px; /* Adjust the width and height to match your desired icon size */
+        height: 50px;
+        background-color: transparent; /* Set the background color to transparent */
+        border: 1px solid #fff; /* Add a 1px border with your desired color */
+        border-radius: 50%; /* Create a circular shape */
+        text-align: center; /* Center the icon horizontally and vertically */
+        line-height: 50px; /* Center the icon vertically */
+    }
+
+    .social-links a:hover{
+        border-color: rgba(242, 242, 247, 0.4);
+    }
+    
+    .fa-icon { /* Adjust this selector based on the class used for your icon (e.g., FontAwesome) */
+        font-size: 24px; /* Adjust the font size of the icon */
+        color: #fff; /* Set the icon color */
+    }
+    
+    
+    
+    .main-two-left a i{
+        padding: 3px;
+        border-radius: 50%;
+        margin-left: 4px;
+        background-color: var(--accent-mod-cyan);
+        color: #fff;
+    }
+}
+
